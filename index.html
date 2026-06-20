@@ -6,15 +6,17 @@
     <title>Jessiemae's GIS Portfolio</title>
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        /* Ensures sections have enough room when you jump to them */
-        section { padding-top: 100px; padding-bottom: 100px; }
+        /* This makes each section at least the size of the screen */
+        section { padding-top: 80px; padding-bottom: 80px; }
+        /* This specifically makes your Home section fill the full screen */
+        #home { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="80">
 
     <nav id="navbar-main" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#home">GIS Portfolio</a>
+            <a class="navbar-brand" href="#home">Jessiemae Iquina</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,24 +31,22 @@
         </div>
     </nav>
 
-    <section id="home">
-        <div class="container px-4 px-lg-5 text-center">
-            <h1 class="mt-5">Jessiemae's GIS Portfolio</h1>
-            <p class="lead">Welcome to my final GIS project. This site documents my problem-solving journey, skills learned, and spatial analysis work over the semester.</p>
+    <section id="home" class="bg-dark text-white">
+        <div class="container px-4 text-center">
+            <h1 class="display-1 fw-bold">Jessiemae Iquina</h1>
+            <p class="lead">Final GIS Portfolio | Problem-Solving through Spatial Analysis</p>
+            <a href="#map1" class="btn btn-primary btn-lg mt-4">View My Work</a>
         </div>
     </section>
 
     <section id="map1" class="bg-light">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
+        <div class="container px-4">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2>Homicide Density in Chicago</h2>
-                    <p>Insert your 4-6 sentence narrative here about the homicide map. Explain the problem, the spatial pattern you found, and how you solved it.</p>
+                    <p>Narrative: [Insert your 4-6 sentence story about the homicide map here.]</p>
                     <h4>GIS Tools & Skills:</h4>
-                    <ul>
-                        <li>Spatial Normalization (Calculate Geometry)</li>
-                        <li>Choropleth Mapping (Natural Breaks)</li>
-                    </ul>
+                    <ul><li>Spatial Normalization</li><li>Choropleth Mapping</li></ul>
                 </div>
                 <div class="col-lg-6">
                     <img src="assets/homicide_map.png" class="img-fluid rounded shadow" alt="Homicide Map">
@@ -56,16 +56,13 @@
     </section>
 
     <section id="map2">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
+        <div class="container px-4">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2>Airbnb Review Density</h2>
-                    <p>Insert your 4-6 sentence narrative here about the Airbnb review density. Discuss how this compares to the homicide data and what it reveals about Chicago.</p>
+                    <p>Narrative: [Insert your 4-6 sentence story about the Airbnb review density here.]</p>
                     <h4>GIS Tools & Skills:</h4>
-                    <ul>
-                        <li>Relational Data Joins</li>
-                        <li>Density Mapping</li>
-                    </ul>
+                    <ul><li>Relational Data Joins</li><li>Density Mapping</li></ul>
                 </div>
                 <div class="col-lg-6">
                     <img src="assets/airbnb_density.png" class="img-fluid rounded shadow" alt="Airbnb Density Map">
@@ -75,16 +72,13 @@
     </section>
 
     <section id="map3" class="bg-light">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
+        <div class="container px-4">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2>Airbnb Price Analysis</h2>
-                    <p>Insert your 4-6 sentence narrative here about the price analysis table and how it maps out across the city.</p>
+                    <p>Narrative: [Insert your 4-6 sentence story about the price patterns here.]</p>
                     <h4>GIS Tools & Skills:</h4>
-                    <ul>
-                        <li>Data Summarization</li>
-                        <li>Table Export/Attribute Manipulation</li>
-                    </ul>
+                    <ul><li>Data Summarization</li><li>Table Manipulation</li></ul>
                 </div>
                 <div class="col-lg-6">
                     <img src="assets/price_table.png" class="img-fluid rounded shadow" alt="Price Analysis Table">
@@ -92,12 +86,6 @@
             </div>
         </div>
     </section>
-
-    <footer class="py-5 bg-dark">
-        <div class="container px-4 px-lg-5 text-center text-white">
-            <p>Portfolio created for GIS Final Lab</p>
-        </div>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
