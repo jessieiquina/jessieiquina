@@ -16,3 +16,5 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled');
     }
 });
+<script src="js/scripts.js"></script>
+</body>
