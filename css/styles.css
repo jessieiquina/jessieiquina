@@ -26,3 +26,21 @@
 #home {
     background: transparent !important;
 }
+/* --- Seamless Navbar Styles --- */
+
+/* Initially transparent */
+.navbar {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Becomes solid dark when user scrolls past 50 pixels */
+.navbar.scrolled {
+    background-color: rgba(33, 37, 41, 0.95) !important;
+}
+
+/* Ensure links stay white */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
