@@ -1,46 +1,14 @@
-/* --- Custom Seamless Navigation Styles --- */
-
-/* 1. Make the navbar transparent and remove default shadows */
+/* --- Seamless Navbar Fixes --- */
 .navbar {
     background-color: transparent !important;
     box-shadow: none !important;
     transition: background-color 0.3s ease;
 }
 
-/* 2. Style for when the user scrolls down to make it readable */
-.navbar.scrolled {
-    background-color: rgba(33, 37, 41, 0.95) !important; /* Semi-transparent dark background */
-}
-
-/* 3. Ensure the navbar text stays visible */
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #fff !important;
-}
-
-/* 4. Optional: Remove the background color from the Home section 
-   if you want the background image to show through everywhere */
-#home {
-    background: transparent !important;
-}
-/* --- Seamless Navbar Styles --- */
-
-/* Initially transparent */
-.navbar {
-    background-color: transparent !important;
-    box-shadow: none !important;
-    transition: background-color 0.3s ease;
-}
-
-/* Becomes solid dark when user scrolls past 50 pixels */
 .navbar.scrolled {
     background-color: rgba(33, 37, 41, 0.95) !important;
 }
 
-/* Ensure links stay white */
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.8) !important;
 }
