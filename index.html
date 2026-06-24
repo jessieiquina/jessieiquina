@@ -26,7 +26,8 @@
         </div>
     </nav>
 
-    <section id="home" class="text-white text-center d-flex align-items-center justify-content-center bg-secondary" style="min-height: 100vh;">
+    <!-- Removed bg-secondary from this section so your image shows through -->
+    <section id="home" class="text-white text-center d-flex align-items-center justify-content-center" style="min-height: 100vh;">
         <div class="container px-4">
             <h1 class="display-1 fw-bold">
                 Jessiemae Iquina<br>
@@ -72,23 +73,36 @@
         </div>
     </section>
 
-    <section id="density-analysis" class="py-5">
+   <!-- This section has a white background (no bg-light class) -->
+   <section id="density-analysis" class="py-5">
         <div class="container px-4">
-            <h2 class="text-center mb-5">Hispanic Population Density Map in the Contiguous U.S.</h2>
+            <h2 class="text-center mb-5">Hispanic Population in the Contiguous U.S.</h2>
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <img src="assets/density.pdf" class="img-fluid rounded shadow" alt="Hispanic Population Density Map">
-                    <p class="mt-3 text-center text-muted">1 Dot = 10,000 people</p>
+                
+                <div class="col-lg-5">
+                    <img src="assets/density.pdf" class="img-fluid rounded shadow mb-3" alt="Hispanic Population Density Map">
+                    <p class="text-center text-muted small"><em>Featured: Hispanic Population Density Map (1 Dot = 10,000 people)</em></p>
                 </div>
-                <div class="col-lg-6">
-                    <h3>Analysis & Methodology</h3>
-                    <p>This map visualizes the spatial distribution of the Hispanic population across the contiguous United States by state[cite: 1]. Utilizing a dot density symbology method, each dot represents 10,000 individuals[cite: 3], allowing for an intuitive understanding of population clusters and regional demographic concentrations. This technique is highly effective for illustrating volume and spatial patterns without the distorting effects sometimes caused by traditional choropleth mapping across variable-sized administrative boundaries.</p>
+
+                <div class="col-lg-7">
+                    <h3>Analysis</h3>
+                    <p>
+                        The census data is collected by the US Census Bureau every 10 years which is used to determine the seats each state has in the U.S of Representatives which is typically collected through online portals or through other forms of records that the government has. The projection I chose to map the continental US NAD 1983 Contiguous USA Albers because it preserves the area which is important to the data that we are plotting in the US. If used a different projection the states would be projected differently and the data provided would not be plotted correctly especially when using a dot density map where the location and area is needed. 
+                    </p>
+                    <p>
+                        The maps I chose to represent are a Density Dot map, proportion symbol map, and Choropleth map. The Choropleth map shows a gradient of colors where darker colors show a greater percentage of the hispanic population per state. The dot density shows a similar attribute but in terms of quantity and area. The dot represents around 10,000 Hispanic people and looking at the map as a whole you can see where there is a greater population compared to other states. The proportion symbol map uses a singular dot where the size of the dot shows the proportional population size to other states. 
+                    </p>
+                    <p>
+                        There are limitations to using Census Data because it relies on surveying which means there can be an under-count of people especially in those who live in more remote places. Additionally, since Hispanics can be of a multi-ethinic group it can lead to inaccuracies to how people are represented since the census uses fixed categories to define race and ethnicity.
+                    </p>
+
                     <hr>
-                    <h5>GIS Tools & Skills Used:</h5>
+
+                    <h3 class="mt-4">Skills Learned</h3>
                     <ul>
-                        <li><strong>Dot Density Symbology:</strong> Effectively communicating raw counts and spatial distribution over large geographic extents[cite: 3].</li>
-                        <li><strong>Cartographic Design:</strong> Balancing dot size and value to ensure regional clusters remain legible at a national scale[cite: 1, 3].</li>
-                        <li><strong>Data Symbolization:</strong> Translating tabular demographic census data into meaningful visual clusters.</li>
+                        <li>Learned how to retrieve spatial data from the U.S Census Bureau, understanding the way it is labeled, and reinforcing my knowledge on selecting attributes and projections.</li>
+                        <li>Developed a deeper understanding of symbology and how to represent different types of maps such as Choropleth and Dot Density Mapping.</li>
+                        <li>Learned what values are put in the Normalization option to represent the data correctly, and how to change certain values to help the map read clearly.</li>
                     </ul>
                 </div>
             </div>
@@ -104,13 +118,13 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <h3>Analysis & Methodology</h3>
-                    <p>This environmental justice analysis identifies high-risk areas for water toxicity within the ward boundaries of Flint, Michigan[cite: 9, 13]. By overlaying critical infrastructure data, this map highlights zones facing compounding environmental hazards. The spatial layout details the intersection of lead service lines, high-risk exposure areas, and high-pollution facilities generating over 10,000 tons of pollutants near the Michigan river lines[cite: 10, 11, 12].</p>
+                    <p>This environmental justice analysis identifies high-risk areas for water toxicity within the ward boundaries of Flint, Michigan. By overlaying critical infrastructure data, this map highlights zones facing compounding environmental hazards. The spatial layout details the intersection of lead service lines, high-risk exposure areas, and high-pollution facilities generating over 10,000 tons of pollutants near the Michigan river lines.</p>
                     <hr>
                     <h5>GIS Tools & Skills Used:</h5>
                     <ul>
-                        <li><strong>Spatial Overlay:</strong> Combining multiple infrastructure and hazard layers (lead lines, pollution facilities) to identify vulnerable zones[cite: 10, 12].</li>
-                        <li><strong>Multi-Criteria Risk Assessment:</strong> Mapping high-risk exposure areas based on overlapping environmental threats[cite: 11].</li>
-                        <li><strong>Thematic Mapping:</strong> Communicating complex public health and environmental crises using clear, distinct symbology for facilities and water lines[cite: 12].</li>
+                        <li><strong>Spatial Overlay:</strong> Combining multiple infrastructure and hazard layers (lead lines, pollution facilities) to identify vulnerable zones.</li>
+                        <li><strong>Multi-Criteria Risk Assessment:</strong> Mapping high-risk exposure areas based on overlapping environmental threats.</li>
+                        <li><strong>Thematic Mapping:</strong> Communicating complex public health and environmental crises using clear, distinct symbology for facilities and water lines.</li>
                     </ul>
                 </div>
             </div>
