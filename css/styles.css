@@ -2,11 +2,9 @@
 
 /* 1. Make body background match the template */
 body {
-    background: assets/your-new-background.jpeg no-repeat center center fixed;
+    background: url('../assets/your-new-background.jpeg') no-repeat center center fixed;
     background-size: cover;
 }
-
-/* 2. Seamless Navbar: Initially transparent */
 .navbar {
     background-color: transparent !important;
     box-shadow: none !important;
