@@ -113,20 +113,28 @@
         <div class="container px-4">
             <h2 class="text-center mb-5">High-Risk Areas for Water Toxicity in Flint, Michigan</h2>
             <div class="row align-items-center">
+                
                 <div class="col-lg-6 order-lg-2">
-                    <img src="assets/Mastery Map.pdf" class="img-fluid rounded shadow" alt="Flint Michigan Water Toxicity Map">
+                    <!-- Embedded PDF viewer for the Mastery Map -->
+                    <embed src="assets/Mastery Map.pdf" width="100%" height="600px" type="application/pdf" class="rounded shadow">
                 </div>
+                
                 <div class="col-lg-6 order-lg-1">
                     <h3>Analysis & Methodology</h3>
                     <p>This environmental justice analysis identifies high-risk areas for water toxicity within the ward boundaries of Flint, Michigan. By overlaying critical infrastructure data, this map highlights zones facing compounding environmental hazards. The spatial layout details the intersection of lead service lines, high-risk exposure areas, and high-pollution facilities generating over 10,000 tons of pollutants near the Michigan river lines.</p>
+                    
                     <hr>
-                    <h5>GIS Tools & Skills Used:</h5>
+                    
+                    <h3 class="mt-4">GIS Skills & Workflow</h3>
                     <ul>
-                        <li><strong>Spatial Overlay:</strong> Combining multiple infrastructure and hazard layers (lead lines, pollution facilities) to identify vulnerable zones.</li>
-                        <li><strong>Multi-Criteria Risk Assessment:</strong> Mapping high-risk exposure areas based on overlapping environmental threats.</li>
-                        <li><strong>Thematic Mapping:</strong> Communicating complex public health and environmental crises using clear, distinct symbology for facilities and water lines.</li>
+                        <li><strong>Projections & Data Integration:</strong> Projected spatial data to NAD 1983 HARN StatePlane Michigan South and performed table joins to connect Michigan TRI Facilities with tabular water pollution data.</li>
+                        <li><strong>Attribute Selection:</strong> Utilized "Select by Attributes" to isolate specific data points—such as high pollution facilities (water pollution > 10,000 tons) and designated lead service lines—and exported them as isolated layers.</li>
+                        <li><strong>Geoprocessing Tools:</strong> Clipped river lines to ward boundaries and ran multiple Buffer tools (using the 'dissolve all' type) to map proximity risks: 0.3 miles around high pollution sites and river lines, and 0.2 miles around lead service lines.</li>
+                        <li><strong>Spatial Intersection:</strong> Executed the Intersect tool to combine the three buffered layers, successfully pinpointing definitively overlapping high-risk exposure areas.</li>
+                        <li><strong>Cartographic Layout:</strong> Designed a final map layout to cleanly display the resulting intersect alongside context layers (ward boundaries, clipped riverline, high pollution points, and lead lines), incorporating standard map elements including a legend, north arrow, and scale.</li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </section>
