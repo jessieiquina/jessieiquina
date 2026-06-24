@@ -74,35 +74,36 @@
     </section>
 
    <!-- This section now has a solid white background -->
-   <section id="density-analysis" class="py-5 bg-white">
+  <section id="density-analysis" class="py-5 bg-white">
         <div class="container px-4">
             <h2 class="text-center mb-5">Hispanic Population in the Contiguous U.S.</h2>
             <div class="row align-items-center">
                 
                 <div class="col-lg-5">
-                    <img src="assets/density.pdf" class="img-fluid rounded shadow mb-3" alt="Hispanic Population Density Map">
-                    <p class="text-center text-muted small"><em>Featured: Hispanic Population Density Map (1 Dot = 10,000 people)</em></p>
+                    <embed src="assets/density.pdf" width="100%" height="500px" type="application/pdf" class="rounded shadow mb-3">
+                    <p class="text-center text-muted small mt-2"><em>Featured: Hispanic Population Density Map (1 Dot = 10,000 people)</em></p>
                 </div>
 
                 <div class="col-lg-7">
                     <h3>Analysis</h3>
                     <p>
-                        The census data is collected by the US Census Bureau every 10 years which is used to determine the seats each state has in the U.S of Representatives which is typically collected through online portals or through other forms of records that the government has. The projection I chose to map the continental US NAD 1983 Contiguous USA Albers because it preserves the area which is important to the data that we are plotting in the US. If used a different projection the states would be projected differently and the data provided would not be plotted correctly especially when using a dot density map where the location and area is needed. 
+                        The census data is collected by the US Census Bureau every 10 years, which is used to determine the seats each state has in the U.S. House of Representatives. To map the continental U.S., I chose the <strong>NAD 1983 Contiguous USA Albers</strong> projection because it preserves area, which is vital when plotting spatial data across the country. If a different projection were used, the states would be projected differently, and the data would not be plotted correctly—especially for a dot density map where location and physical area are strictly necessary. 
                     </p>
                     <p>
-                        The maps I chose to represent are a Density Dot map, proportion symbol map, and Choropleth map. The Choropleth map shows a gradient of colors where darker colors show a greater percentage of the hispanic population per state. The dot density shows a similar attribute but in terms of quantity and area. The dot represents around 10,000 Hispanic people and looking at the map as a whole you can see where there is a greater population compared to other states. The proportion symbol map uses a singular dot where the size of the dot shows the proportional population size to other states. 
+                        For this visualization, I utilized a <strong>Dot Density Map</strong>. In this representation, each dot represents around 10,000 Hispanic people. By looking at the map as a whole, you can clearly see where there is a greater population concentration compared to other states, providing an intuitive understanding of volume and regional demographic distribution.
                     </p>
                     <p>
-                        There are limitations to using Census Data because it relies on surveying which means there can be an under-count of people especially in those who live in more remote places. Additionally, since Hispanics can be of a multi-ethinic group it can lead to inaccuracies to how people are represented since the census uses fixed categories to define race and ethnicity.
+                        There are limitations to using Census Data because it relies on surveying, which can lead to an under-count of people—especially those who live in more remote places. Additionally, since Hispanics can be of a multi-ethnic group, it can lead to inaccuracies in how individuals are represented because the census uses fixed categories to define race and ethnicity.
                     </p>
 
                     <hr>
 
-                    <h3 class="mt-4">Skills Learned</h3>
+                    <h3 class="mt-4">GIS Skills & Workflow</h3>
                     <ul>
-                        <li>Learned how to retrieve spatial data from the U.S Census Bureau, understanding the way it is labeled, and reinforcing my knowledge on selecting attributes and projections.</li>
-                        <li>Developed a deeper understanding of symbology and how to represent different types of maps such as Choropleth and Dot Density Mapping.</li>
-                        <li>Learned what values are put in the Normalization option to represent the data correctly, and how to change certain values to help the map read clearly.</li>
+                        <li><strong>Data Retrieval & Projections:</strong> Retrieved spatial data from the U.S Census Bureau and applied the NAD 1983 Contiguous USA Albers projected coordinate system to preserve area accuracy.</li>
+                        <li><strong>Data Querying:</strong> Sorted data descending (`ALAND10`) and utilized "Select by Attributes" to filter states where the Hispanic population (`DP010002`) was greater than the total population of the least populous state (`> 563626`).</li>
+                        <li><strong>Dot Density Symbology:</strong> Applied primary symbology to field `DP010002`, setting 1 dot equal to 10,000 people to visualize population quantity and area distribution.</li>
+                        <li><strong>Cartographic Design:</strong> Finalized the map layout by inserting essential elements including a legend, scale, title, and north arrow.</li>
                     </ul>
                 </div>
             </div>
